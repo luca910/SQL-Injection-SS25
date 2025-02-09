@@ -1,0 +1,189 @@
+/* Importing the Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+/* Defining CSS variables for light mode */
+:root {
+    --background: #fff; /* Set the background color to white */
+    --background-light: #d3d3d3; /* Set the light background color to light grey */
+    --background-lighter: #e9ecef; /* Set the lighter background color to a lighter grey */
+    --background-lightest: #dee2e6; /* Set the lightest background color to the lightest grey */
+    --background-darkest: #fff; /* Set the darkest background color to white */
+    --font-color: #000; /* Set the font color to black */
+    --grad: linear-gradient(-135deg, #c850c0, #4158d0); /* Set the gradient color from purple to blue */
+    --text: #000; /* Set the text color to black */
+    --link: #4158d0; /* Set the link color to blue */
+}
+
+/* Defining CSS variables for dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #1e1e1e; /* Set the background color to dark grey */
+        --background-light: #2e2e2e; /* Set the light background color to a darker grey */
+        --background-lighter: #3e3e3e; /* Set the lighter background color to an even darker grey */
+        --background-lightest: #4e4e4e; /* Set the lightest background color to the darkest grey */
+        --background-darkest: #0e0e0e; /* Set the darkest background color to black */
+        --font-color: #fff; /* Set the font color to white */
+        --grad: linear-gradient(-135deg, #983a93, #2b45ad); /* Set the gradient color from purple to blue */
+        --text: #fff; /* Set the text color to white */
+        --link: #5e7bfd; /* Set the link color to blue */
+    }
+}
+
+/* Global styles */
+*{
+    margin: 0; /* Remove the default margin */
+    padding: 0; /* Remove the default padding */
+    box-sizing: border-box; /* Include the border and padding in the element's total width and height */
+    font-family: 'Poppins', sans-serif; /* Set the font to Poppins, with sans-serif as a fallback */
+}
+
+/* Styles for html and body */
+html,body{
+    display: grid; /* Use grid for layout */
+    height: 100%; /* Set the height to 100% */
+    width: 100%; /* Set the width to 100% */
+    place-items: center; /* Center the items both horizontally and vertically */
+    background: var(--grad); /* Set the background to the gradient color defined in the CSS variables */
+}
+
+/* Styles for selected text */
+::selection{
+    background: #4158d0; /* Set the background color to blue */
+    color: #fff; /* Set the text color to white */
+}
+
+/* Styles for the wrapper */
+.wrapper{
+    width: 380px; /* Set the width to 380px */
+    background: var(--background-lightest); /* Set the background color to the lightest background color defined in the CSS variables */
+    border-radius: 15px; /* Add rounded corners with a radius of 15px */
+    box-shadow: 0 15px 20px rgba(0,0,0,0.1); /* Add a box shadow */
+}
+
+/* Styles for the title within the wrapper */
+.wrapper .title{
+    font-size: 35px; /* Set the font size to 35px */
+    font-weight: 600; /* Set the font weight to 600 */
+    text-align: center; /* Center the text */
+    line-height: 100px; /* Set the line height to 100px */
+    color: #fff; /* Set the text color to white */
+    user-select: none; /* Prevent the user from selecting the text */
+    border-radius: 15px 15px 15px 15px; /* Add rounded corners with a radius of 15px */
+    background: #e2001a; /* Set the background color to red */
+}
+
+/* Styles for the form within the wrapper */
+.wrapper form{
+    padding: 10px 30px 50px 30px; /* Add padding of 10px to the top, 30px to the right and left, and 50px to the bottom */
+}
+
+/* Styles for the field within the form */
+.wrapper form .field{
+    height: 50px; /* Set the height to 50px */
+    width: 100%; /* Set the width to 100% */
+    margin-top: 20px; /* Add a top margin of 20px */
+    position: relative; /* Position it relative to its normal position */
+}
+
+/* Styles for the input within the field */
+.wrapper form .field input{
+    height: 100%; /* Set the height to 100% */
+    width: 100%; /* Set the width to 100% */
+    outline: none; /* Remove the default outline */
+    font-size: 17px; /* Set the font size to 17px */
+    padding-left: 20px; /* Add a left padding of 20px */
+    border: 1px solid lightgrey; /* Add a 1px solid light grey border */
+    border-radius: 25px; /* Add rounded corners with a radius of 25px */
+    transition: all 0.3s ease; /* Add a transition effect to all properties, with a duration of 0.3s and a ease timing function */
+}
+
+/* Styles for the input when it is focused or valid */
+.wrapper form .field input:focus,
+form .field input:valid{
+    border-color: #4158d0; /* Change the border color to blue */
+}
+
+/* Styles for the label within the field */
+.wrapper form .field label{
+    position: absolute; /* Position it in an absolute position */
+    top: 50%; /* Position it at the vertical center */
+    left: 20px; /* Position it 20px from the left */
+    color: #999999; /* Set the text color to grey */
+    font-weight: 400; /* Set the font weight to 400 */
+    font-size: 17px; /* Set the font size to 17px */
+    pointer-events: none; /* Make it non-interactive */
+    transform: translateY(-50%); /* Move it up by half its height */
+    transition: all 0.3s ease; /* Add a transition effect to all properties, with a duration of 0.3s and a ease timing function */
+}
+
+/* Styles for the label when the input is focused or valid */
+form .field input:focus ~ label,
+form .field input:valid ~ label{
+    top: 0; /* Move it to the top */
+    font-size: 16px; /* Reduce the font size to 16px */
+    color: var(--link); /* Change the text color to the link color defined in the CSS variables */
+    background: #fff; /* Set the background color to white */
+    transform: translateY(-50%); /* Move it up by half its height */
+}
+
+/* Styles for the content within the form */
+form .content{
+    display: flex; /* Use flexbox for layout */
+    width: 100%; /* Set the width to 100% */
+    height: 50px; /* Set the height to 50px */
+    font-size: 16px; /* Set the font size to 16px */
+    align-items: center; /* Align the items along the vertical center */
+    justify-content: space-around; /* Distribute the items evenly along the horizontal line */
+}
+
+/* Styles for the input within the content */
+form .content input{
+    width: 15px; /* Set the width to 15px */
+    height: 15px; /* Set the height to 15px */
+    background: #e2001a; /* Set the background color to red */
+}
+
+/* Styles for the label within the content */
+form .content label{
+    color: #262626; /* Set the text color to a dark grey */
+    user-select: none; /* Prevent the user from selecting the text */
+    padding-left: 5px; /* Add a left padding of 5px */
+}
+
+/* Styles for the submit input within the field */
+form .field input[type="submit"]{
+    color: var(--text); /* Set the text color to the text color defined in the CSS variables */
+    border: none; /* Remove the default border */
+    padding-left: 0; /* Remove the left padding */
+    margin-top: -10px; /* Add a top margin of -10px */
+    font-size: 20px; /* Set the font size to 20px */
+    font-weight: 500; /* Set the font weight to 500 */
+    cursor: pointer; /* Change the cursor to a pointer when hovering over the input */
+    background: var(--grad); /* Set the background to the gradient color defined in the CSS variables */
+    transition: all 0.3s ease; /* Add a transition effect to all properties, with a duration of 0.3s and a ease timing function */
+}
+
+/* Styles for the submit input when it is active */
+form .field input[type="submit"]:active{
+    transform: scale(0.95); /* Reduce the size to 95% of its original size */
+}
+
+/* Styles for the signup-link within the form */
+form .signup-link{
+    color: var(--text); /* Set the text color to the text color defined in the CSS variables */
+    margin-top: 20px; /* Add a top margin of 20px */
+    text-align: center; /* Center the text */
+}
+
+/* Styles for the link within the pass-link and signup-link */
+form .pass-link a,
+form .signup-link a{
+    color: var(--link); /* Set the text color to the link color defined in the CSS variables */
+    text-decoration: none; /* Remove the default underline */
+}
+
+/* Styles for the link within the pass-link and signup-link when it is hovered */
+form .pass-link a:hover,
+form .signup-link a:hover{
+    text-decoration: underline; /* Add an underline */
+}

@@ -1,0 +1,123 @@
+/* Styles for the body */
+body {
+    font-family: Arial, sans-serif; /* Set the font to Arial, sans-serif as a fallback */
+    margin: 0; /* Remove the default margin */
+    padding: 0; /* Remove the default padding */
+}
+
+/* Styles for the container */
+.container {
+    width: 80%; /* Set the width to 80% of the parent element */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add 20px of padding on all sides */
+}
+
+/* Styles for the header */
+header {
+    background-color: #f8f9fa; /* Set the background color to a light grey */
+    padding: 20px 0; /* Add 20px of padding to the top and bottom */
+    border-bottom: 1px solid #ccc; /* Add a 1px solid grey border to the bottom */
+}
+
+/* Styles for paragraphs with the class 'bigger-p' */
+.bigger-p {
+    font-size: 22px; /* Increase the font size to 22px */
+}
+
+/* Styles for paragraphs within the 'about' class */
+.about p {
+    text-align: justify; /* Justify the text */
+}
+
+/* Styles for the hero section */
+.hero {
+    position: relative; /* Set the position to relative */
+    height: 70vh; /* Set the height to 70% of the viewport height */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    text-align: center; /* Center the text */
+    background: url('../img/home-background.jpg') no-repeat center center/cover; /* Set the background image */
+    color: white; /* Set the text color to white */
+    overflow: hidden; /* Hide any overflowing content */
+    transition: height 0.1s ease-out; /* Transition the height property over 0.1s */
+}
+
+/* Styles for the pseudo-element before the hero */
+.hero::before {
+    content: ''; /* Set the content to an empty string */
+    position: absolute; /* Set the position to absolute */
+    top: 0; /* Position it at the top */
+    left: 0; /* Position it at the left */
+    right: 0; /* Stretch it to the right */
+    bottom: 0; /* Stretch it to the bottom */
+    background-color: rgba(0, 0, 0, 0.5); /* Set the background color to a semi-transparent black */
+}
+
+/* Styles for the pseudo-element after the hero */
+.hero::after {
+    content: ""; /* Set the content to an empty string */
+    position: absolute; /* Set the position to absolute */
+    top: 0; /* Position it at the top */
+    left: 0; /* Position it at the left */
+    width: 100%; /* Stretch it to the full width */
+    height: 100%; /* Stretch it to the full height */
+}
+
+/* Styles for the container within the hero */
+.hero .container {
+    position: relative; /* Set the position to relative */
+    z-index: 1; /* Set the z-index to 1 to stack it above the pseudo-elements */
+}
+
+/* Styles for the h1 within the hero */
+.hero h1 {
+    color: white; /* Set the text color to white */
+    font-size: 4rem; /* Set the font size to 4rem */
+    z-index: 1;
+}
+
+/* Styles for the 'about' and 'locations' sections */
+.about,
+.locations {
+    padding: 50px 0; /* Add 50px of padding to the top and bottom */
+}
+
+/* Styles for the footer */
+footer {
+    background-color: #333; /* Set the background color to a dark grey */
+    color: #fff; /* Set the text color to white */
+    text-align: center; /* Center the text */
+    padding: 20px 0; /* Add 20px of padding to the top and bottom */
+}
+
+/* Styles for the 'location-single' class */
+.location-single {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow the items to wrap onto multiple lines */
+    justify-content: space-between; /* Distribute the items evenly along the horizontal line */
+}
+
+/* Styles for the 'card' class */
+.card {
+    flex-basis: calc(33.33% - 20px); /* Calculate the width for 3 cards per row with 20px of space between the cards */
+    margin-bottom: 20px; /* Add 20px of margin to the bottom */
+}
+
+/* Media query for screens with a maximum width of 800px */
+@media (max-width: 800px) {
+    /* Styles for the 'card' class */
+    .card {
+        flex-basis: calc(50% - 20px); /* Change the width for 2 cards per row with 20px of space between the cards */
+    }
+}
+
+/* Media query for screens with a maximum width of 500px */
+@media (max-width: 500px) {
+    /* Styles for the 'card' class within the 'location-single' class */
+    .location-single .card {
+        width: 100%; /* Set the width to 100% for each card */
+        margin-right: 0; /* Remove the right margin */
+        margin-bottom: 1.5vw; /* Add 1.5vw of margin to the bottom */
+    }
+}

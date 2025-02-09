@@ -1,0 +1,113 @@
+/* Styles for the container holding the available and delete options */
+.available-delete {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Align the items along the vertical center */
+    border: none; /* Remove the default border */
+    border-radius: 20px; /* Add rounded corners with a radius of 20px */
+    margin: 0.5vh; /* Add a margin of 0.5% of the viewport height on all sides */
+}
+
+/* Styles for the available and delete options */
+.available,
+.delete {
+    flex: 1; /* Allow the item to grow and shrink as needed */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack the items vertically */
+    align-items: center; /* Align the items along the vertical center */
+}
+
+/* Styles for the text indicating availability */
+.available-text {
+    font-weight: bold; /* Set the font weight to bold */
+}
+
+/* Styles for the delete button */
+.btn-delete {
+    border: none; /* Remove the default border */
+    color: #fff; /* Set the text color to white */
+    background-color: #dc3545; /* Set the background color to a dark red */
+    width: 10vw; /* Set the width to 10% of the viewport width */
+    height: 50px; /* Set the height to 50px */
+    margin: 2vw 2vw 0;
+}
+
+/* Styles for the checkbox input */
+input[type=checkbox] {
+    -ms-transform: scale(3); /* Scale the size of the checkbox for Internet Explorer */
+    transform: scale(3); /* Scale the size of the checkbox */
+}
+
+/* Styles for the container holding the title and description */
+.title-description {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack the items vertically */
+}
+
+/* Styles for the input and textarea within the title-description container */
+.title-description input,
+.title-description textarea {
+    width: 23vw; /* Set the width to 23% of the viewport width */
+    background-color: #e5dddd; /* Set the background color to a light grey */
+    border: none; /* Remove the default border */
+}
+
+/* Additional styles for the input within the title-description container */
+.title-description input {
+    margin-bottom: 10px; /* Add a bottom margin of 10px */
+}
+
+/* Additional styles for the textarea within the title-description container */
+.title-description textarea {
+    height: 130px; /* Set the height to 130px */
+    resize: none; /* Disable resizing */
+}
+
+/* Styles for the image */
+.image {
+    max-width: 100%; /* Set the maximum width to 100% */
+    max-height: 100%; /* Set the maximum height to 100% */
+    border-radius: 20px; /* Add rounded corners with a radius of 20px */
+    border: 5px solid #dfd5d5; /* Add a 5px solid light pink border */
+    box-sizing: border-box; /* Include the border in the element's total width and height */
+}
+
+/* Styles for the image insert container */
+.insert-img {
+    align-items: center; /* Align the items along the vertical center */
+    border-radius: 20px 0 0 20px; /* Add rounded corners to the top left and bottom left */
+    margin-right: 4vw; /* Add a right margin of 4% of the viewport width */
+    width: 100%; /* Set the width to 100% */
+}
+
+/* Styles for the file input */
+.file-input {
+    position: relative; /* Position it relative to its normal position */
+    z-index: 1; /* Set the stack order to 1 */
+    background: rgba(255, 255, 255, 0.8); /* Set the background color to a semi-transparent white */
+    border-radius: 10px; /* Add rounded corners with a radius of 10px */
+    padding: 0.5rem; /* Add a padding of 0.5rem on all sides */
+    width: 20vw; /* Set the width to 20% of the viewport width */
+    margin-left: 1vw; /* Add a left margin of 1% of the viewport width */
+}
+
+/* Styles for the character count */
+.charcount {
+    font-size: 0.7em; /* Set the font size to 0.7em */
+    color: #555; /* Set the text color to a dark grey */
+    text-align: right; /* Align the text to the right */
+    margin-top: 5px; /* Add a top margin of 5px */
+}
+
+/* Styles for the primary button */
+.btn-primary {
+    width: 170px; /* Set the width to 170px */
+}
+
+/* Media query for screens with a width of 1000px or less */
+@media (width <=1000px) {
+    /* Styles for the h1 element */
+    h1 {
+        margin-left: 0; /* Remove the left margin */
+    }
+}
