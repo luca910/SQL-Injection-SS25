@@ -1,0 +1,100 @@
+/******************************************/
+/* Styles for increment and decrement view */
+/******************************************/
+
+/* Styles for the increment and decrement view */
+.inc-dec-view {
+    flex: 1; /* Allow the item to grow and shrink as needed */
+    border: none; /* Remove the default border */
+    border-radius: 20px; /* Add rounded corners with a radius of 20px */
+    margin: 0.5vh; /* Add a margin of 0.5% of the viewport height on all sides */
+}
+
+/* Styles for the quantity */
+.quantity {
+    padding-right: 2vh; /* Add a right padding of 2% of the viewport height */
+}
+
+/* Styles for the increment and decrement button */
+.btn-inc-dec {
+    background-color: #007bff; /* Set the background color to a bright blue */
+    font-size: 100px; /* Set the font size to 100px */
+    font-weight: bold; /* Set the font weight to bold */
+    color: white; /* Set the text color to white */
+}
+
+/* Styles for the quantity view */
+.quantity-view {
+    background-color: white; /* Set the background color to white */
+    text-align: center; /* Center the text */
+    font-weight: bold; /* Set the font weight to bold */
+    font-size: 100px; /* Set the font size to 100px */
+}
+
+/******************************************/
+/* Styles for order container */
+/******************************************/
+
+/* Styles for the order container */
+.order-container {
+    display: none; /* Hide the container by default */
+    align-items: center; /* Align the items along the vertical center */
+    justify-content: flex-end; /* Align the items to the end (right) */
+    text-align: right; /* Align the text to the right */
+    margin-top: 20px; /* Add a top margin of 20px */
+    margin-right: 10vw; /* Add a right margin of 10% of the viewport width */
+}
+
+/* Styles for the order button and order permission */
+.order-button, .order-permission {
+    width: 150px; /* Set the width to 150px */
+    margin-bottom: 0; /* Remove the bottom margin */
+    margin-left: 2vw; /* Add a left margin of 2% of the viewport width */
+    text-align: center; /* Center the text */
+}
+
+/* Styles for the order button when it is disabled */
+.order-button:disabled {
+    background-color: cornflowerblue; /* Change the background color to cornflower blue */
+}
+
+/* Styles for the delivery label */
+.deliveryLbl {
+    margin-right: 1vw; /* Add a right margin of 1% of the viewport width */
+}
+
+/* Styles for the read sorten denied message */
+.readSortenDenied {
+    display: none; /* Hide the message by default */
+    position: fixed; /* Position it in a fixed position */
+    top: 0; /* Position it at the top */
+    left: 0; /* Position it at the left */
+    width: 100%; /* Stretch it to the full width */
+    height: 100%; /* Stretch it to the full height */
+    background-color: rgba(0, 0, 0, 0.8); /* Set the background color to a semi-transparent black */
+    color: white; /* Set the text color to white */
+    font-size: 2em; /* Set the font size to 2em */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    text-align: center; /* Center the text */
+}
+
+/******************************************/
+/* Media queries */
+/******************************************/
+
+/* Media query for screens with a maximum width of 1250px */
+@media (width <=1250px) {
+    /* Styles for the increment and decrement view */
+    .inc-dec-view {
+        width: 10vw; /* Set the width to 10% of the viewport width */
+    }
+}
+
+/* Media query for screens with a maximum width of 1200px */
+@media (width <=1200px) {
+    /* Styles for the order container */
+    .order-container {
+        margin-right: 0; /* Remove the right margin */
+    }
+}

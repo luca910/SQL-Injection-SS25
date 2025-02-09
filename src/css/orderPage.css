@@ -1,0 +1,22 @@
+/* Increased specificity by targeting button elements directly within #buttonContainer */
+div#buttonContainer button {
+    padding: 10px 20px;
+    margin: 5px; /* Adjusted based on your needs */
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
+div#buttonContainer button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Ensuring flex properties are set despite Bootstrap's styles */
+div#buttonContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}

@@ -1,0 +1,33 @@
+/* Styles for the custom search input */
+.custom-search-input {
+    width: 40vw; /* Set the width to 40% of the viewport width */
+}
+
+/* Styles for the fluid container */
+.container-fluid {
+    margin-right: 10vw; /* Add a right margin of 10% of the viewport width */
+    margin-left: 10vw; /* Add a left margin of 10% of the viewport width */
+}
+
+/* Styles for the navbar brand */
+.navbar-brand {
+    font-weight: bold; /* Set the font weight to bold */
+}
+
+/* Styles for the navigation button */
+.nav-btn {
+    cursor: pointer; /* Change the cursor to a pointer when hovering over the button */
+}
+
+/* Media query for screens with a maximum width of 1250px */
+@media (width <=1250px) {
+    /* Styles for the fluid container */
+    .container-fluid {
+        margin-right: 0; /* Remove the right margin */
+        margin-left: 0; /* Remove the left margin */
+    }
+    /* Styles for the custom search input */
+    .custom-search-input {
+        width: 55vw; /* Increase the width to 55% of the viewport width */
+    }
+}

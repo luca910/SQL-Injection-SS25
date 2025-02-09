@@ -1,0 +1,77 @@
+
+
+/* Navigation and Container Divs */
+.FirmenDiv, .ButtonContent {
+    background-color: white;
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px; /* Rounded corners for the divs */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+/* Styling for Buttons */
+button {
+    background-color: #0056b3; /* Blue background */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px; /* Rounded corners for buttons */
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+    margin: 0.3vw;
+}
+
+button:hover, button:focus {
+    background-color: #004494; /* Darker blue on hover/focus */
+    transform: translateY(-2px); /* Slight raise on hover */
+}
+
+/* Loader Class for loading animations */
+.loader {
+    border: 5px solid #f3f3f3; /* Light grey border */
+    border-top: 5px solid #3498db; /* Blue border top */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Paragraph Styling */
+p {
+    color: #333; /* Dark grey color for text */
+    font-size: 16px; /* Adequate font size */
+}
+
+/* Specific Div Styling for Orders */
+.NewOrders, .ShippedOrders {
+    padding: 10px;
+    background-color: #e9ecef; /* Light gray background for differentiation */
+    margin-bottom: 20px;
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Details container within orders */
+.details-container {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    margin-top: 10px;
+}
+
+/* Responsive Design for smaller devices */
+@media (max-width: 768px) {
+    .FirmenDiv, .ButtonContent {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    button {
+        padding: 8px 16px;
+    }
+}

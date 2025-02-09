@@ -1,0 +1,90 @@
+/* Styles for the h1 tag */
+h1 {
+    font-weight: bold; /* Set the font weight to bold */
+    margin-left: 10vw; /* Add a left margin of 10% of the viewport width */
+    margin-bottom: 4vh; /* Add a bottom margin of 4% of the viewport height */
+}
+
+/* Styles for the section */
+.section {
+    margin-bottom: 5vh; /* Add a bottom margin of 5% of the viewport height */
+}
+
+/* Styles for the product list container */
+.productlist-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the items horizontally */
+    flex-direction: column; /* Stack the items vertically */
+    margin-left: 10vw; /* Add a left margin of 10% of the viewport width */
+    margin-right: 10vw; /* Add a right margin of 10% of the viewport width */
+    margin-bottom: 2vh; /* Add a bottom margin of 2% of the viewport height */
+    row-gap: 3vh; /* Add a gap of 3% of the viewport height between the rows */
+}
+
+/* Styles for the product container */
+.product-container {
+    width: auto; /* Set the width to auto */
+    display: flex; /* Use flexbox for layout */
+    background-color: #dfd5d5; /* Set the background color to a light pink */
+    border-radius: 20px; /* Add rounded corners with a radius of 20px */
+    height: 225px; /* Set the height to 225px */
+}
+
+/* Styles for the product info */
+.product-info {
+    display: flex; /* Use flexbox for layout */
+    flex: 1; /* Allow the item to grow and shrink as needed */
+}
+
+/* Styles for the image */
+.image {
+    width: 100%; /* Set the width to 100% */
+    border-radius: 20px 0 0 20px; /* Add rounded corners to the top left and bottom left */
+    border: 5px solid #dfd5d5; /* Add a 5px solid light pink border */
+    box-sizing: border-box; /* Include the border in the element's total width and height */
+}
+
+/* Styles for the smaller class */
+.smaller {
+    padding-top: 2vh; /* Add a top padding of 2% of the viewport height */
+    padding-bottom: 2vh; /* Add a bottom padding of 2% of the viewport height */
+}
+
+/* Styles for the description */
+.description {
+    padding: 2vh 2.25vw 2vh 1.125vw;
+    display: block; /* Display as a block element */
+    hyphens: auto; /* Automatically add hyphens for line breaks */
+    text-align: justify; /* Justify the text */
+}
+
+/* Styles for the product description */
+.product-description {
+    display: none; /* Hide the element by default */
+}
+
+/* Styles for the product title */
+.product-title {
+    font-weight: bold; /* Set the font weight to bold */
+}
+
+/* Media query for screens with a maximum width of 1200px */
+@media (width <=1200px) {
+    /* Styles for the product list container */
+    .productlist-container {
+        margin-left: 0; /* Remove the left margin */
+        margin-right: 0; /* Remove the right margin */
+    }
+    /* Styles for the h1 tag */
+    h1 {
+        margin-left: 0; /* Remove the left margin */
+    }
+}
+
+/* Media query for screens with a minimum width of 800px */
+@media (min-width: 800px) {
+    /* Styles for the product description */
+    .product-description {
+        display: block; /* Display the element */
+    }
+}
