@@ -48,6 +48,24 @@ if (isset($_GET['login'])) {
 
         // Set various session variables for the user
         $_SESSION['user'] = $user['user'];
+        $_SESSION['userid'] = $user['id'];
+        $_SESSION['admin'] = $user['admin'];
+
+        $_SESSION['bestellungBearbeiten'] = $user['bestellungBearbeiten'];
+        $_SESSION['bestellungLoeschen'] = $user['bestellungLoeschen'];
+        $_SESSION['bestellungAufgeben'] = $user['bestellungAufgeben'];
+        $_SESSION['bestellStatus'] = $user['bestellStatus'];
+        $_SESSION['bestellungAbrufen'] = $user['bestellungAbrufen'];
+
+        $_SESSION['sortenBearbeiten'] = $user['sortenBearbeiten'];
+        $_SESSION['sortenLoeschen'] = $user['sortenLoeschen'];
+        $_SESSION['sortenErstellen'] = $user['sortenErstellen'];
+        $_SESSION['sortenAbrufen'] = $user['sortenAbrufen'];
+
+        $_SESSION['standorteBearbeiten'] = $user['standorteBearbeiten'];
+        $_SESSION['standorteLoeschen'] = $user['standorteLoeschen'];
+        $_SESSION['standorteAnlegen'] = $user['standorteAnlegen'];
+        $_SESSION['standorteAbrufen'] = $user['standorteAbrufen'];
 
 
         // Set a success message and hide the login form

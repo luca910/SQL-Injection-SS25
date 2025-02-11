@@ -10,3 +10,8 @@ if (isset($_SESSION['user'])) {
 } else {
     echo "You are not logged in!";
 }
+
+//return session array visually
+echo "<pre>";
+print_r($_SESSION);
+echo "</pre>";
