@@ -26,7 +26,7 @@ $errorMessage = '';
 $showLogin = true;
 
 // Get the redirect URL from the GET parameters or default to '/Index.html'
-$redirect = $_GET['redirect'] ?? '/Index.html';
+$redirect = $_GET['redirect'] ?? '/Index.php';
 
 // Check if the login form has been submitted
 if (isset($_GET['login'])) {

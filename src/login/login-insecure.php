@@ -26,7 +26,7 @@ $errorMessage = '';
 $showLogin = true;
 
 // Get the redirect URL from the GET parameters or default to '/Index.html'
-$redirect = $_GET['redirect'] ?? '/Index.html';
+$redirect = $_GET['redirect'] ?? '/Index.php';
 
 // Check if the login form has been submitted
 if (isset($_GET['login'])) {
@@ -130,13 +130,14 @@ if (!$showLogin) { ?>
                 <div class="success" style="text-align: center; padding: 30px 0 30px 0!important;">
                     <p style="color: green; font-size: 40px; text-align: center; padding: 0 0 20px 0">
                         <?php echo $successMessage."Hello: ".$_SESSION['user']; ?>
-                        <?php echo "\n".$query; ?>
+
                     </p>
                     <div
                         style="height: 50px; width: 80% !important; background-color: green; color: #fff; padding: 10px; text-align: center; margin: 0 auto; border-radius: 20px">
                         <a style="color: #fff; text-decoration: none;font-family: Poppins, sans-serif;font-size: 20px; font-weight: 500"
                            href="<?php echo $redirect; ?>">Weiter</a>
                     </div>
+                    <?php echo "\n".$query; ?>
                 </div>
             <?php endif; ?>
         </div>
